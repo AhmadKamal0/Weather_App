@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/background.webp',
+              'assets/bg.jpg',
               fit: BoxFit.cover,
             ),
           ),
@@ -55,13 +55,58 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 20),
                 Text(
                   'Favorite Cities:',
-                  style: TextStyle(fontSize: 16, color: Colors.black),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold, // Make the text bold
+                    color: Colors.white, // Set text color (the outline will be black)
+                    shadows: [
+                      Shadow(
+                        offset: Offset(-1.5, -1.5),
+                        color: Colors.black,
+                      ),
+                      Shadow(
+                        offset: Offset(1.5, -1.5),
+                        color: Colors.black,
+                      ),
+                      Shadow(
+                        offset: Offset(1.5, 1.5),
+                        color: Colors.black,
+                      ),
+                      Shadow(
+                        offset: Offset(-1.5, 1.5),
+                        color: Colors.black,
+                      ),
+                    ],
+                  ),
                 ),
                 for (var city in favoritesProvider.favoriteCities)
                   Text(
                     city,
-                    style: TextStyle(fontSize: 16, color: Colors.black),
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold, // Make the text bold
+                      color: Colors.white, // Set text color (the outline will be black)
+                      shadows: [
+                        Shadow(
+                          offset: Offset(-1.5, -1.5),
+                          color: Colors.black,
+                        ),
+                        Shadow(
+                          offset: Offset(1.5, -1.5),
+                          color: Colors.black,
+                        ),
+                        Shadow(
+                          offset: Offset(1.5, 1.5),
+                          color: Colors.black,
+                        ),
+                        Shadow(
+                          offset: Offset(-1.5, 1.5),
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
                   ),
+
               ],
             ),
           ),
