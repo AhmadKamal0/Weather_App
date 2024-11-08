@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'weather_screen.dart';
+
 class SettingsScreen extends StatefulWidget {
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
@@ -29,7 +30,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       return;
     }
 
-    final apiKey = '';
+    final apiKey = '2151b95625554980b5bb5b6b4c5aa7eb';
     final url = 'https://api.weatherbit.io/v2.0/current?city=$city&key=$apiKey';
 
     try {
@@ -37,7 +38,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body)['data'];
-
         if (data.isEmpty || data[0]['city_name'].toLowerCase() != city.toLowerCase()) {
           setState(() {
             errorMessage = 'City not found. Please check the spelling and try again.';
@@ -46,6 +46,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           });
           return;
         }
+
 
         final cityData = data[0];
         final timezone = cityData['timezone'];
@@ -117,7 +118,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: Text('Search'),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
