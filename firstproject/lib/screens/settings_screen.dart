@@ -30,7 +30,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       return;
     }
 
-    final apiKey = '2151b95625554980b5bb5b6b4c5aa7eb';
+    final apiKey = '';
     final url = 'https://api.weatherbit.io/v2.0/current?city=$city&key=$apiKey';
 
     try {
