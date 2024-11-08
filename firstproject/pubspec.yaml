@@ -61,7 +61,7 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets/background.webp
+    - assets/bg.jpg
     - assets/title.png
 
 
