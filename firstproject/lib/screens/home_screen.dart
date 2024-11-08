@@ -44,15 +44,6 @@ class HomeScreen extends StatelessWidget {
                         builder: (context) => SettingsScreen(),
                       ),
                     );
-
-                    if (city != null) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => WeatherScreen(city: city),
-                        ),
-                      );
-                    }
                   },
                   child: Text('Find City'),
                 ),
